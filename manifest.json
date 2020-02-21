@@ -1,0 +1,27 @@
+{
+  "name": "Onlike Khabar Full Page ad Remove",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension decreases time of Full page ad from 10 sec to 1 sec",
+  "homepage_url": "http://onlinekhabar.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "contentSettings"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.onlinekhabar.com/*"
+      ],
+      "js": [
+	"src/inject/jquery.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
